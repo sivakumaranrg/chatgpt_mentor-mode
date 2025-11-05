@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2025-11-05T06:21:28Z"
+  labels:
+    app: web
+  name: web
+  namespace: lab
+  resourceVersion: "1561"
+  uid: 7930f507-a4fe-41f8-b945-9599b86a3b10
+spec:
+  clusterIP: 172.20.236.12
+  clusterIPs:
+  - 172.20.236.12
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: web
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
