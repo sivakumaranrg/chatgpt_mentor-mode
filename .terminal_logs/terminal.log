@@ -1,187 +1,0 @@
-Script started on 2025-11-05 06:14:22+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="115" LINES="30"]
-      Welcome to the KodeKloud Hands-On lab                                                   
-[38;5;44m [39m[38;5;44m [39m[38;5;44m [39m[38;5;44m [39m[38;5;44m_[39m[38;5;44m_[39m[38;5;44m [39m[38;5;44m_[39m[38;5;44m_[39m[38;5;43m_[39m[38;5;49m_[39m[38;5;49m_[39m[38;5;49m_[39m[38;5;49m [39m[38;5;49m [39m[38;5;49m_[39m[38;5;49m_[39m[38;5;49m_[39m[38;5;49m_[39m[38;5;49m [39m[38;5;48m [39m[38;5;48m_[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;84m [39m[38;5;83m_[39m[38;5;83m_[39m[38;5;83m [39m[38;5;83m_[39m[38;5;83m_[39m[38;5;83m [39m[38;5;83m [39m[38;5;83m [39m[38;5;83m [39m[38;5;83m_[39m[38;5;83m_[39m[38;5;119m_[39m[38;5;118m_[39m[38;5;118m [39m[38;5;118m [39m[38;5;118m_[39m[38;5;118m_[39m[38;5;118m [39m[38;5;118m [39m[38;5;118m_[39m[38;5;118m_[39m[38;5;154m_[39m[38;5;154m_[39m[38;5;154m_[39m[38;5;154m_[39m[38;5;154m [39m[38;5;154m[39m
-[38;5;44m [39m[38;5;44m [39m[38;5;44m [39m[38;5;44m/[39m[38;5;44m [39m[38;5;44m/[39m[38;5;43m/[39m[38;5;49m_[39m[38;5;49m/[39m[38;5;49m [39m[38;5;49m_[39m[38;5;49m_[39m[38;5;49m [39m[38;5;49m\[39m[38;5;49m/[39m[38;5;49m [39m[38;5;49m_[39m[38;5;48m_[39m[38;5;48m [39m[38;5;48m\[39m[38;5;48m/[39m[38;5;48m [39m[38;5;48m_[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;84m/[39m[38;5;83m [39m[38;5;83m/[39m[38;5;83m/[39m[38;5;83m_[39m[38;5;83m/[39m[38;5;83m/[39m[38;5;83m [39m[38;5;83m/[39m[38;5;83m [39m[38;5;83m [39m[38;5;83m [39m[38;5;119m/[39m[38;5;118m [39m[38;5;118m_[39m[38;5;118m_[39m[38;5;118m [39m[38;5;118m\[39m[38;5;118m/[39m[38;5;118m [39m[38;5;118m/[39m[38;5;118m [39m[38;5;154m/[39m[38;5;154m [39m[38;5;154m/[39m[38;5;154m [39m[38;5;154m_[39m[38;5;154m_[39m[38;5;154m [39m[38;5;154m\[39m[38;5;154m[39m
-[38;5;44m [39m[38;5;44m [39m[38;5;44m/[39m[38;5;43m [39m[38;5;49m,[39m[38;5;49m<[39m[38;5;49m [39m[38;5;49m/[39m[38;5;49m [39m[38;5;49m/[39m[38;5;49m [39m[38;5;49m/[39m[38;5;49m [39m[38;5;49m/[39m[38;5;48m [39m[38;5;48m/[39m[38;5;48m [39m[38;5;48m/[39m[38;5;48m [39m[38;5;48m/[39m[38;5;48m [39m[38;5;48m_[39m[38;5;48m_[39m[38;5;84m/[39m[38;5;83m [39m[38;5;83m/[39m[38;5;83m [39m[38;5;83m,[39m[38;5;83m<[39m[38;5;83m [39m[38;5;83m [39m[38;5;83m/[39m[38;5;83m [39m[38;5;83m/[39m[38;5;83m [39m[38;5;119m [39m[38;5;118m [39m[38;5;118m/[39m[38;5;118m [39m[38;5;118m/[39m[38;5;118m [39m[38;5;118m/[39m[38;5;118m [39m[38;5;118m/[39m[38;5;118m [39m[38;5;154m/[39m[38;5;154m [39m[38;5;154m/[39m[38;5;154m [39m[38;5;154m/[39m[38;5;154m [39m[38;5;154m/[39m[38;5;154m [39m[38;5;154m/[39m[38;5;148m [39m[38;5;184m/[39m[38;5;184m[39m
-[38;5;43m [39m[38;5;49m/[39m[38;5;49m [39m[38;5;49m/[39m[38;5;49m|[39m[38;5;49m [39m[38;5;49m/[39m[38;5;49m [39m[38;5;49m/[39m[38;5;49m_[39m[38;5;49m/[39m[38;5;48m [39m[38;5;48m/[39m[38;5;48m [39m[38;5;48m/[39m[38;5;48m_[39m[38;5;48m/[39m[38;5;48m [39m[38;5;48m/[39m[38;5;48m [39m[38;5;84m/[39m[38;5;83m_[39m[38;5;83m_[39m[38;5;83m_[39m[38;5;83m/[39m[38;5;83m [39m[38;5;83m/[39m[38;5;83m|[39m[38;5;83m [39m[38;5;83m|[39m[38;5;83m/[39m[38;5;83m [39m[38;5;119m/[39m[38;5;118m_[39m[38;5;118m_[39m[38;5;118m_[39m[38;5;118m/[39m[38;5;118m [39m[38;5;118m/[39m[38;5;118m_[39m[38;5;118m/[39m[38;5;118m [39m[38;5;154m/[39m[38;5;154m [39m[38;5;154m/[39m[38;5;154m_[39m[38;5;154m/[39m[38;5;154m [39m[38;5;154m/[39m[38;5;154m [39m[38;5;154m/[39m[38;5;148m_[39m[38;5;184m/[39m[38;5;184m [39m[38;5;184m/[39m[38;5;184m [39m[38;5;184m[39m
-[38;5;49m/[39m[38;5;49m_[39m[38;5;49m/[39m[38;5;49m [39m[38;5;49m|[39m[38;5;49m_[39m[38;5;49m\[39m[38;5;49m_[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;48m/[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;48m_[39m[38;5;84m/[39m[38;5;83m_[39m[38;5;83m_[39m[38;5;83m_[39m[38;5;83m_[39m[38;5;83m_[39m[38;5;83m/[39m[38;5;83m_[39m[38;5;83m/[39m[38;5;83m [39m[38;5;83m|[39m[38;5;83m_[39m[38;5;119m/[39m[38;5;118m_[39m[38;5;118m_[39m[38;5;118m_[39m[38;5;118m_[39m[38;5;118m_[39m[38;5;118m/[39m[38;5;118m\[39m[38;5;118m_[39m[38;5;118m_[39m[38;5;154m_[39m[38;5;154m_[39m[38;5;154m/[39m[38;5;154m\[39m[38;5;154m_[39m[38;5;154m_[39m[38;5;154m_[39m[38;5;154m_[39m[38;5;154m/[39m[38;5;148m_[39m[38;5;184m_[39m[38;5;184m_[39m[38;5;184m_[39m[38;5;184m_[39m[38;5;184m/[39m[38;5;184m [39m[38;5;184m [39m[38;5;184m[39m
-[38;5;49m [39m[38;5;49m [39m[38;5;49m [39m[38;5;49m [39m[38;5;49m [39m[38;5;48m [39m[38;5;48m [39m[38;5;48m [39m[38;5;48m [39m[38;5;48m [39m[38;5;48m [39m[38;5;48m [39m[38;5;48m [39m[38;5;48m [39m[38;5;84m [39m[38;5;83m [39m[38;5;83m [39m[38;5;83m [39m[38;5;83m [39m[38;5;83m [39m[38;5;83m [39m[38;5;83m [39m[38;5;83m [39m[38;5;83m [39m[38;5;83m [39m[38;5;83m [39m[38;5;119m [39m[38;5;118m [39m[38;5;118m [39m[38;5;118m [39m[38;5;118m [39m[38;5;118m [39m[38;5;118m [39m[38;5;118m [39m[38;5;118m [39m[38;5;118m [39m[38;5;154m [39m[38;5;154m [39m[38;5;154m [39m[38;5;154m [39m[38;5;154m [39m[38;5;154m [39m[38;5;154m [39m[38;5;154m [39m[38;5;154m [39m[38;5;148m [39m[38;5;184m [39m[38;5;184m [39m[38;5;184m [39m[38;5;184m [39m[38;5;184m [39m[38;5;184m [39m[38;5;184m [39m[38;5;184m [39m[38;5;184m [39m[38;5;184m [39m[38;5;184m[39m
-[m[?25h[?1;5;2004l          All rights reserved                                                                 
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  [K[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  clea[K[K[K[Kk get all
-[?2004lNAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
-service/kubernetes   ClusterIP   172.20.0.1   <none>        443/TCP   5m6s
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  [H[2J
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  k version --short
-[?2004lerror: unknown flag: --short
-See 'kubectl version --help' for usage.
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;31m✖[0m kubectl version -short
-[?2004lClient Version: v1.34.0
-Kustomize Version: v5.7.1
-Unable to connect to the server: dial tcp: lookup hort on 10.96.0.10:53: no such host
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;31m✖[0m k get nodes -0[Ko wo[Kide
-[?2004lNAME           STATUS   ROLES           AGE    VERSION   INTERNAL-IP       EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION    CONTAINER-RUNTIME
-controlplane   Ready    control-plane   6m7s   v1.34.0   192.168.121.229   <none>        Ubuntu 22.04.5 LTS   5.15.0-1083-gcp   containerd://1.6.26
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  k create nf[Ks lab
-[?2004lnamespace/lab created
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  k set-con[K[K[K[K[K[K[K[Kubectl config set-context --current --namespace-la[K[K[K=lab
-[?2004lContext "kubernetes-admin@kubernetes" modified.
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  k get ns
-[?2004lNAME              STATUS   AGE
-default           Active   7m2s
-kube-node-lease   Active   7m2s
-kube-public       Active   7m2s
-kube-system       Active   7m3s
-lab               Active   45s
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  clear
-[?2004l[H[2J[3J[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  kubectl create depo[Kloyment --image[K[K[K[K[K[K[Kweb --image=nginx:1.25 --replicas=2
-[?2004ldeployment.apps/web created
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  k get deploy,rs,po -o wide
-[?2004lNAME                  READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES       SELECTOR
-deployment.apps/web   2/2     2            2           19s   nginx        nginx:1.25   app=web
-
-NAME                             DESIRED   CURRENT   READY   AGE   CONTAINERS   IMAGES       SELECTOR
-replicaset.apps/web-7f8f9d5f9d   2         2         2       19s   nginx        nginx:1.25   app=web,pod-template-hash=7f8f9d5f9d
-
-NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE           NOMINATED NODE   READINESS GATES
-pod/web-7f8f9d5f9d-4w524   1/1     Running   0          19s   172.17.0.5   controlplane   <none>           <none>
-pod/web-7f8f9d5f9d-7nz29   1/1     Running   0          19s   172.17.0.6   controlplane   <none>           <none>
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  kubectl expose deployment web --port=80 --target-port=80 --tupe[K[K[Kype=ClusterIP
-[?2004lservice/web exposed
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  k get svc
-[?2004lNAME   TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
-web    ClusterIP   172.20.236.12   <none>        80/TCP    3s
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  k get svc
-[?2004lNAME   TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
-web    ClusterIP   172.20.236.12   <none>        80/TCP    7s
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  [H[2J
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  [7mkubectl run curl --image=busybox:1.36 --restart=Never --command -- sh -c "sleep 3600"[27m
-[7mkubectl wait --for=condition=Ready pod/curl --timeout=60s[27m
-[7mCLUSTER_IP=$(kubectl get svc web -o jsonpath='{.spec.clusterIP}')[27m
-[7mkubectl exec -it curl -- wget -qO- http://$CLUSTER_IP/[27m
-[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl run curl --image=busybox:1.36 --restart=Never --command -- sh -c "sleep 3600"
-kubectl wait --for=condition=Ready pod/curl --timeout=60s
-CLUSTER_IP=$(kubectl get svc web -o jsonpath='{.spec.clusterIP}')
-kubectl exec -it curl -- wget -qO- http://$CLUSTER_IP/
-[A
-[?2004lpod/curl created
-pod/curl condition met
-<!DOCTYPE html>
-<html>
-<head>
-<title>Welcome to nginx!</title>
-<style>
-html { color-scheme: light dark; }
-body { width: 35em; margin: 0 auto;
-font-family: Tahoma, Verdana, Arial, sans-serif; }
-</style>
-</head>
-<body>
-<h1>Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.</p>
-
-<p>For online documentation and support please refer to
-<a href="http://nginx.org/">nginx.org</a>.<br/>
-Commercial support is available at
-<a href="http://nginx.com/">nginx.com</a>.</p>
-
-<p><em>Thank you for using nginx.</em></p>
-</body>
-</html>
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  k set image deployments [K[K[K[K[K[K/web ngins[Kx=nginx:1.27
-[?2004ldeployment.apps/web image updated
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  k rollout status deploy/web
-[?2004ldeployment "web" successfully rolled out
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  k rollout status deploy/web[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kk rollout history deploy/web
-[?2004ldeployment.apps/web 
-REVISION  CHANGE-CAUSE
-1         <none>
-2         <none>
-
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  k get all
-[?2004lNAME                       READY   STATUS    RESTARTS   AGE
-pod/curl                   1/1     Running   0          2m20s
-pod/web-66d47686b4-5lw6j   1/1     Running   0          26s
-pod/web-66d47686b4-ttthp   1/1     Running   0          34s
-
-NAME          TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
-service/web   ClusterIP   172.20.236.12   <none>        80/TCP    3m30s
-
-NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/web   2/2     2            2           5m10s
-
-NAME                             DESIRED   CURRENT   READY   AGE
-replicaset.apps/web-66d47686b4   2         2         2       35s
-replicaset.apps/web-7f8f9d5f9d   0         0         0       5m10s
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  history
-[?2004l    1  k get all
-    2  k version --short
-    3  kubectl version -short
-    4  k get nodes -o wide
-    5  k create ns lab
-    6  kubectl config set-context --current --namespace=lab
-    7  k get ns
-    8  clear
-    9  kubectl create deployment web --image=nginx:1.25 --replicas=2
-   10  k get deploy,rs,po -o wide
-   11  kubectl expose deployment web --port=80 --target-port=80 --type=ClusterIP
-   12  k get svc
-   13  kubectl run curl --image=busybox:1.36 --restart=Never --command -- sh -c "sleep 3600"
-   14  kubectl wait --for=condition=Ready pod/curl --timeout=60s
-   15  CLUSTER_IP=$(kubectl get svc web -o jsonpath='{.spec.clusterIP}')
-   16  kubectl exec -it curl -- wget -qO- http://$CLUSTER_IP/
-   17  k set image deploy/web nginx=nginx:1.27
-   18  k rollout status deploy/web
-   19  k rollout history deploy/web
-   20  k get all
-   21  history
-[?2004h
-[1;34mcontrolplane[0m [1;36m~[0m [1;32m➜[0m  [7mmkdir -p deploy config storage rbac policy autoscale[27m
-[7mkubectl get deploy web -o yaml > deploy/deploy-web.yaml[27m
-[7mkubectl get svc web -o yaml > deploy/svc-web.yaml[27m
-[7mprintf "# KodeKloud lab – Day 1\n\n## Reproduce\n\nkubectl create ns lab\nkubectl config set-context --current --namespace=lab\nkubectl apply -f deploy/deploy-web.[27m[7my[27m[7maml\nkubectl apply -f deploy/svc-web.yaml\nkubectl set image deploy/web nginx=nginx:1.27\nkubectl rollout status deploy/web\n" > README.md [27m
-
-[7mgit init[27m
-[7mecho ".DS_Store" >> .gitignore[27m
-[7mgit add .[27m
-[7mgit commit -m "Day 1: nginx deploy+service+rollout in lab"[27m
-[A[A[A[A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir -p deploy config storage rbac policy autoscale
-kubectl get deploy web -o yaml > deploy/deploy-web.yaml
-kubectl get svc web -o yaml > deploy/svc-web.yaml
-printf "# KodeKloud lab – Day 1\n\n## Reproduce\n\nkubectl create ns lab\nkubectl config set-context --current --namespace=lab\nkubectl apply -f deploy/deploy-web.yaml\nkubectl apply -f deploy/svc-web.yaml\nkubectl set image deploy/web nginx=nginx:1.27\nkubectl rollout status deploy/web\n" > README.md
-
-git init
-echo ".DS_Store" >> .gitignore
-git add .
-git commit -m "Day 1: nginx deploy+service+rollout in lab"
-[A
-[?2004l[33mhint: Using 'master' as the name for the initial branch. This default branch name[m
-[33mhint: is subject to change. To configure the initial branch name to use in all[m
-[33mhint: of your new repositories, which will suppress this warning, call:[m
-[33mhint: [m
-[33mhint: 	git config --global init.defaultBranch <name>[m
-[33mhint: [m
-[33mhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and[m
-[33mhint: 'development'. The just-created branch can be renamed via this command:[m
-[33mhint: [m
-[33mhint: 	git branch -m <name>[m
-Initialized empty Git repository in /root/.git/
