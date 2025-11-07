@@ -1,0 +1,61 @@
+controlplane ~ on  master [!?] ➜  history
+    1  k get all
+    2  k version --short
+    3  kubectl version -short
+    4  k get nodes -o wide
+    5  k create ns lab
+    6  kubectl config set-context --current --namespace=lab
+    7  k get ns
+    8  clear
+    9  kubectl create deployment web --image=nginx:1.25 --replicas=2
+   10  k get deploy,rs,po -o wide
+   11  kubectl expose deployment web --port=80 --target-port=80 --type=ClusterIP
+   12  k get svc
+   13  kubectl run curl --image=busybox:1.36 --restart=Never --command -- sh -c "sleep 3600"
+   14  kubectl wait --for=condition=Ready pod/curl --timeout=60s
+   15  CLUSTER_IP=$(kubectl get svc web -o jsonpath='{.spec.clusterIP}')
+   16  kubectl exec -it curl -- wget -qO- http://$CLUSTER_IP/
+   17  k set image deploy/web nginx=nginx:1.27
+   18  k rollout status deploy/web
+   19  k rollout history deploy/web
+   20  k get all
+   21  history
+   22  mkdir -p deploy config storage rbac policy autoscale
+   23  kubectl get deploy web -o yaml > deploy/deploy-web.yaml
+   24  kubectl get svc web -o yaml > deploy/svc-web.yaml
+   25  printf "# KodeKloud lab – Day 1\n\n## Reproduce\n\nkubectl create ns lab\nkubectl config set-context --current --namespace=lab\nkubectl apply -f deploy/deploy-web.yaml\nkubectl apply -f deploy/svc-web.yaml\nkubectl set image deploy/web nginx=nginx:1.27\nkubectl rollout status deploy/web\n" > README.md
+   26  git init
+   27  echo ".DS_Store" >> .gitignore
+   28  git add .
+   29  git commit -m "Day 1: nginx deploy+service+rollout in lab"
+   30  git config user.name "Sivakumaran RG"
+   31  git config user.email "sivakumaranrg@gmail.com"
+   32  git commit -m "Day 1: nginx deploy+service+rollout in lab" --allow-empty
+   33  git remote add origin git@github.com:sivakumaranrg/chatgpt_mentor-mode.git
+   34  git branch
+   35  git status
+   36  git commit --oneline
+   37  git log --oneline
+   38  git push -u origin master
+   39  git branch -M master
+   40  git push -u origin master
+   41  git remote -v
+   42  git remote remove origin || true
+   43  git remote add origin https://github.com/<YOUR_USERNAME>/k8s-foundation-week-01.git
+   44  git config user.name "Sivakumaran RG"
+   45  git config user.email "sivakumaranrg@gmail.com"
+   46  git branch -M main
+   47  git push -u origin main
+   48  git remote -v
+   49  git remote remove origin || true
+   50  git remote -v
+   51  git remote add origin https://github.com/sivakumaranrg/chatgpt_mentor-mode.git
+   52  git branch -M main
+   53  git push -u origin main
+   54  git remote add origin https://github.com/sivakumaranrg/chatgpt_mentor-mode.git
+   55  git branch -M master
+   56  git push -u origin master
+   57  git branch -M master
+   58  git push -u origin master
+   59  history
+
