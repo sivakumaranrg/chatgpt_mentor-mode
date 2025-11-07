@@ -14,3 +14,7 @@ kubectl apply -f config/web-configmap.yaml
 kubectl apply -f config/web-secret.yaml
 kubectl apply -f deploy/deploy-web.yaml
 kubectl rollout status deploy/web
+
+## Day 3
+- Patched ClusterIP -> NodePort
+- Verified external access via $NODE_IP:$NODE_PORT

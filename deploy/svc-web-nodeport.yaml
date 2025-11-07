@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"creationTimestamp":"2025-11-05T06:21:28Z","labels":{"app":"web"},"name":"web","namespace":"lab","resourceVersion":"1561","uid":"7930f507-a4fe-41f8-b945-9599b86a3b10"},"spec":{"clusterIP":"172.20.236.12","clusterIPs":["172.20.236.12"],"internalTrafficPolicy":"Cluster","ipFamilies":["IPv4"],"ipFamilyPolicy":"SingleStack","ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"web"},"sessionAffinity":"None","type":"ClusterIP"},"status":{"loadBalancer":{}}}
+  creationTimestamp: "2025-11-07T06:20:04Z"
+  labels:
+    app: web
+  name: web
+  namespace: lab
+  resourceVersion: "2941"
+  uid: 04a15e89-d67a-4044-b403-6583355baf39
+spec:
+  clusterIP: 172.20.236.12
+  clusterIPs:
+  - 172.20.236.12
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 30147
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: web
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
