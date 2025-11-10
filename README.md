@@ -18,3 +18,7 @@ kubectl rollout status deploy/web
 ## Day 3
 - Patched ClusterIP -> NodePort
 - Verified external access via $NODE_IP:$NODE_PORT
+
+## Day 4
+- Static PV (hostPath) + PVC bound
+- Verified persistence across pod recreation
