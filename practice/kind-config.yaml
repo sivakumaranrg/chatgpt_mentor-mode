@@ -1,0 +1,13 @@
+# kind-config.yaml
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+  # This maps port 30002 on the EC2 instance's host network to the 
+  # same port inside the kind control plane container.
+  extraPortMappings:
+  - containerPort: 30002
+    hostPort: 30002
+    listenAddress: "0.0.0.0" # Optional: listens on all interfaces
+    protocol: TCP
+
