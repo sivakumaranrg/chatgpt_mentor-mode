@@ -9,6 +9,6 @@ spec:
       ports:
         - containerPort: 80
     - name: jenkins
-      image: jenkins
+      image: jenkins/jenkins
       ports:
         - containerPort: 8080
