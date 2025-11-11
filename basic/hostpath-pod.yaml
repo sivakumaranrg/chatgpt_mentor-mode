@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hostpath-demo
+spec:
+  containers:
+    - name: writer
+      image: busybox
+      command: ["sh", "-c", "echo 'stored on host node' > /hostdata/file && sleep 3600"]
+      volumeMounts:
+        - name: host-storage
+          mountPath: /hostdata
+  volumes:
+    - name: host-storage
+      hostPath:
+        path: /tmp/host-demo
+        type: DirectoryOrCreate
+
