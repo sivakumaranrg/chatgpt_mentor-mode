@@ -1,0 +1,43 @@
+# sc-archive.yaml
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: archive-safe # Your new custom StorageClass name
+provisioner: rancher.io/local-path # The provisioner that does the work (from your Kind setup)
+reclaimPolicy: Retain # The key difference: PV and data will NOT be deleted when PVC is removed
+volumeBindingMode: WaitForFirstConsumer # Required for local storage to schedule on the right node
+---
+# pvc-archive.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: archive-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 500Mi # Requesting 500Mi of storage
+  storageClassName: archive-safe # <<< Pointing to our new StorageClass
+---
+# pod-archive-test.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: archive-test-pod
+spec:
+  containers:
+  - name: writer
+    image: alpine/git
+    command: ["/bin/sh", "-c"]
+    args:
+      - "echo 'Archived data saved!' > /data/archive.txt; sleep 3600"
+    volumeMounts:
+    - mountPath: "/data" 
+      name: archive-storage
+  volumes:
+  - name: archive-storage
+    persistentVolumeClaim:
+      claimName: archive-pvc # References the new PVC
+---
+        

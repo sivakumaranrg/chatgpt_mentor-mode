@@ -1,0 +1,83 @@
+# pv-local.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: hostpath-pv
+spec:
+  capacity:
+    storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce # Only one Node can mount it R/W
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage-class # Important for matching
+  hostPath:
+    path: /var/local/hostpath-data # The path INSIDE the Kind Node container
+---
+# pvc-local.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: hostpath-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce # Must match the PV's access mode (RWO)
+  resources:
+    requests:
+      storage: 500Mi # Requesting 500Mi, which is less than the 1Gi PV capacity
+  storageClassName: local-storage-class # Must match the PV's storageClassName
+---
+# pod-writer.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: writer-pod
+spec:
+  containers:
+  - name: alpine-writer
+    image: alpine/git
+    command: ["/bin/sh", "-c"]
+    args:
+      # 1. Write a file to the mounted volume
+      - "echo 'Hello from Writer Pod, data is persistent!' > /app-data/test-file.txt && sleep 3600"
+    volumeMounts:
+    - mountPath: "/app-data" # The path INSIDE the container where the volume will be
+      name: persistent-storage
+  volumes:
+  - name: persistent-storage
+    persistentVolumeClaim:
+      claimName: hostpath-pvc # References the PVC we just bound
+---
+# pod-reader.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: reader-pod
+spec:
+  containers:
+  - name: alpine-reader
+    image: alpine/git
+    command: ["/bin/sh", "-c"]
+    args:
+      - "cat /app-data/test-file.txt; sleep 3600" # Read the file written by the first pod
+    volumeMounts:
+    - mountPath: "/app-data"
+      name: persistent-storage
+  volumes:
+  - name: persistent-storage
+    persistentVolumeClaim:
+      claimName: hostpath-pvc # Mounts the same bound PVC
+---
+# pvc-dynamic.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dynamic-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+  # We explicitly request the default StorageClass
+  storageClassName: standard        
