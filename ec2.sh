@@ -33,7 +33,8 @@ EOF
 source /home/ec2-user/.bashrc 
 
 exec bash -l
+sleep 5
 k version
 
-sg docker -c "minikube start --driver=docker"'
+sg docker -c "minikube start --driver=docker"
 
