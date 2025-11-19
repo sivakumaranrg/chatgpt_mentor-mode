@@ -1,6 +1,11 @@
 # KodeKloud lab – Day 1
-#setup minikube:
+##setup minikube:
+#While creating ec2 as user-data:
+#!/bin/bash
 curl -s https://raw.githubusercontent.com/sivakumaranrg/chatgpt_mentor-mode/master/ec2.sh | bash
+
+#After login run as ec2-user:
+curl -s https://raw.githubusercontent.com/sivakumaranrg/chatgpt_mentor-mode/master/ec2.sh | bash && exec bash -l
 
 ## Reproduce
 
