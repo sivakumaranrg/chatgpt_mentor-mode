@@ -30,5 +30,5 @@ cat <<EOF >> /home/ec2-user/.bashrc
 alias k=kubectl
 EOF
 
-source /home/ec2-user/.bashrc
+sudo -u ec2-user bash -lc 'source /home/ec2-user/.bashrc && sg docker -c "minikube start --driver=docker"'
 
