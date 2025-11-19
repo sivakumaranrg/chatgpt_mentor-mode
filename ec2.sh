@@ -29,5 +29,6 @@ sudo rm minikube-latest.x86_64.rpm > /dev/null 2>&1
 cat <<EOF >> /home/ec2-user/.bashrc
 alias k=kubectl
 EOF
-echo "source /home/ec2-user/.bashrc" > /dev/null 2>&1
+
+source /home/ec2-user/.bashrc
 
