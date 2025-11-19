@@ -32,5 +32,5 @@ EOF
 
 source /home/ec2-user/.bashrc
 
-sudo -u ec2-user bash -ic 'sg docker -c "minikube start --node=2 --driver=docker"'
+sudo -u ec2-user bash -ic 'sg docker -c "minikube start --nodes=2 --driver=docker"'
 
