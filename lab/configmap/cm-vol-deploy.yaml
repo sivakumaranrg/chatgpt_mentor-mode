@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cm-vol-demo
+  namespace: lab
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cm-vol-demo
+  template:
+    metadata:
+      labels:
+        app: cm-vol-demo
+    spec:
+      containers:
+        - name: cm-vol-app
+          image: busybox
+          command:
+          - sh
+          - -c
+          - sleep 3600
+          volumeMounts:
+          - name: cfg
+            mountPath: /etc/app
+          
+      volumes:
+      - name: cfg
+        configMap:
+          name: demo-config
