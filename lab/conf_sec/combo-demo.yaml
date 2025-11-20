@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: combo-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: combo-demo
+  template:
+    metadata:
+      labels:
+        app: combo-demo
+    spec:
+      containers:
+      - name: app
+        image: busybox
+        command: ["sh", "-c", "sleep 3600"]
+        
+        # ConfigMap as environment variables
+        envFrom:
+        - configMapRef:
+            name: combo-config
+
+        # Secret as environment variables
+        - secretRef:
+            name: combo-secret
+
+        # ConfigMap & Secret as files
+        volumeMounts:
+        - name: cfg-vol
+          mountPath: /etc/cfg
+        - name: sec-vol
+          mountPath: /etc/secret
+
+      volumes:
+      - name: cfg-vol
+        configMap:
+          name: combo-config
+      - name: sec-vol
+        secret:
+          secretName: combo-secret
+
