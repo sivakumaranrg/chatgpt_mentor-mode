@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pv-creator-test
+spec:
+  containers:
+    - name: tester
+      image: busybox
+      command:
+        - sh
+        - -c
+        - |
+          mkdir -p /data && \
+          while true; do date >> /data/attachment-check.log; sleep 30; done
+      volumeMounts:
+        - name: data
+          mountPath: /data
+  restartPolicy: Always
+  volumes:
+    - name: data
+      persistentVolumeClaim:
+        claimName: pvc-ebs-dynamic
