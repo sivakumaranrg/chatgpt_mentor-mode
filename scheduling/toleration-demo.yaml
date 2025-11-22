@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: toleration-demo
+spec:
+  tolerations:
+    - key: "dedicated"
+      operator: "Equal"
+      value: "experimental"
+      effect: "NoSchedule"
+  containers:
+    - name: nginx
+      image: nginx
+

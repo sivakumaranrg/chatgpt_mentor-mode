@@ -1,0 +1,81 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: scheduling-demo
+  labels:
+    app: demo
+spec:
+
+  ###############################
+  # 1. NODE AFFINITY
+  ###############################
+  affinity:
+    nodeAffinity:
+      # HARD RULE → must match
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: env
+                operator: In
+                values:
+                  - prod
+                  - staging
+
+      # SOFT RULE → preferred placement
+      preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 50
+          preference:
+            matchExpressions:
+              - key: disk
+                operator: In
+                values:
+                  - ssd
+
+    ###############################
+    # 2. POD AFFINITY
+    ###############################
+    podAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchExpressions:
+              - key: app
+                operator: In
+                values:
+                  - backend
+          topologyKey: "kubernetes.io/hostname"
+
+    ###############################
+    # 3. POD ANTI-AFFINITY
+    ###############################
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 100
+          labelSelector:
+            matchExpressions:
+              - key: app
+                operator: In
+                values:
+                  - demo       # avoid placing two demo pods on same node
+          topologyKey: "kubernetes.io/hostname"
+
+  ###############################
+  # 4. TOLERATIONS
+  ###############################
+  tolerations:
+    - key: "dedicated"
+      operator: "Equal"
+      value: "experimental"
+      effect: "NoSchedule"
+
+    - key: "team"
+      operator: "Exists"
+      effect: "NoExecute"
+      tolerationSeconds: 300
+
+  ###############################
+  # 5. CONTAINER
+  ###############################
+  containers:
+    - name: nginx
+      image: nginx
+
