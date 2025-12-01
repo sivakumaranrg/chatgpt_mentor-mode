@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-tolerate-controlplane
+spec:
+  containers:
+  - name: c
+    image: nginx
+  tolerations:
+  - key: "node-role.kubernetes.io/control-plane"
+    operator: "Exists"
+    effect: "NoSchedule"
+  - key: "env"
+    operator: "Equal"
+    value: "prod"
+    effect: "NoSchedule"
+
